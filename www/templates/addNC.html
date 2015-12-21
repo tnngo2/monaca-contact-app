@@ -1,0 +1,52 @@
+<ion-header-bar class="bar bar-header bar-assertive">
+	<a class="button icon-left ion-chevron-left button-clear button-light" ng-click="back();">Back</a>
+    <h1 class="title">Header (ADD NEW)</h1>
+</ion-header-bar>
+<ion-view>
+	<ion-content> 
+	  <div class="row">
+	  	<div class="col">
+	  		<img src="img/ionic.png">
+	  	</div>
+	  	<div class="col">
+	  		<div class="list">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">First name:</span>
+					<input type="text" placeholder="John" ng-model="data.firstName">
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Last name:</span>
+					<input type="text" placeholder="Henry" ng-model="data.lastName">
+				</label>
+	  		</div>
+	  	</div>
+	  </div>
+	  <div class="list">
+	  	<label class="item item-input item-stacked-label">
+	    	<span class="input-label">E-Mail:</span>
+    		<input type="text" placeholder="example@sample.com" ng-model="data.email">
+  	  	</label>
+	  	<label class="item item-input item-stacked-label">
+	    	<span class="input-label">Note:</span>
+    		<input type="text" placeholder="ABC Company, Director" ng-model="data.note">
+  	  	</label>
+	    <label class="item item-input item-stacked-label">
+	    	<span class="input-label">PhoneNumber:</span>
+    		<input type="text" placeholder="+00-000-000" ng-model="data.phoneNumber">
+  	  	</label>  	  	
+	  </div>
+	  <div class="row">
+	  	<div class="col">
+	  		<a class="button button-block button-royal" ng-click="save();">SAVE</a>
+	  	</div>
+	  	<div class="col">
+	  		<a class="button button-block button-royal" ng-click="back();">CANCEL</a>	
+	  	</div>
+	  </div>
+
+	  
+	</ion-content>
+</ion-view>
+<ion-footer-bar class="bar bar-footer bar-assertive">
+	<h1 class="title">Footer (ADD NAME CARD screen)</h1>
+</ion-footer-bar>

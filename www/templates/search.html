@@ -1,0 +1,38 @@
+<ion-header-bar class="bar bar-header bar-assertive">
+    <h1 class="title">Header (Name Card List screen)</h1>
+    <button class="button" ng-click="logout()">Logout</button>
+</ion-header-bar>
+
+<ion-view>
+<ion-pane>
+  <div id="search-box" class="bar bar-subheader item-input-inset bar-light">
+    <div class="item-input-wrapper">
+      <i class="icon ion-ios7-search placeholder-icon"></i>
+      <input class="col col-50" type="search" placeholder="Search" ng-model="data.searchQuery" ng-enter="search()" />
+      <i class="clear-search icon ion-ios7-close-empty" ng-click="clearSearch()"></i>
+    </div>
+    <button class="button button-dark" ng-click="search()">Search</button>
+    <div class="col col-10">
+      <ion-spinner icon="ripple" ng-show="spinner"></ion-spinner>
+    </div>
+  </div>
+  <ion-content class="has-subheader">
+    <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()"></ion-refresher>
+    <ion-list ng-controller="SearchCtrl" show-delete="false" can-swipe="true">
+        <ion-item class="item-thumbnail-left" ng-repeat="item in persons">
+          <img src="http://placehold.it/100x100" alt="photo" />
+          <h2>{{item.firstName}}&nbsp;{{item.lastName}}</h2>
+          <h3>{{item.email}}</h3>
+          <h4>{{item._links.self.href}}</h4>
+          <ion-option-button class="button-info" ng-click="detail(item);">Edit</ion-option-button>
+          <ion-option-button class="button-assertive icon ion-trash-a" ng-click="delete(item._links.self.href)"></ion-option-button>
+        </ion-item>
+        <a class="button button-block button-balanced" ng-click="addNC();">ADD MORE <i class="icon ion-person-add"></i></a>
+    </ion-list>
+  </ion-content>
+  </ion-pane>
+</ion-view>
+
+<ion-footer-bar class="bar bar-footer bar-assertive">
+  <h1 class="title">Footer (Name Card List screen)</h1>
+</ion-footer-bar>
