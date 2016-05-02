@@ -1,2 +1,3 @@
 # monaca-contact-app
-Converted Ionic App running in Monaca
+A hybrid smartphone application to manage business contacts.
+This prototype is converted from Ionic to compile in Monoca platform.
