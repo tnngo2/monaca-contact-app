@@ -1,3 +1,6 @@
 # monaca-contact-app
-A hybrid smartphone application to manage business contacts.
-This prototype is converted from Ionic to compile in Monoca platform.
+This project is a hybrid iOS and Android app to manage business contacts.
+I've firstly created using Ionic framework.
+Then, in the latest update just successfully compile and run it in Monaca platform.
+
+Used framework: Ionic, Angular JS, Monaca platform.
